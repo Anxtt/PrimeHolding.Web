@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Leasing Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="calculator">
+        <h1>Car Leasing Calculator</h1>
+        <div class="calcContainer">
+            <div class="calcGroup">
+                <label for="carType">Car Type:</label>
+                <select id="carType">
+                    <option value="used">Used</option>
+                    <option value="new">Brand New</option>
+                </select>
+            </div>
+            
+            <div class="calcGroup">
+                <label for="leasePeriod">Lease Period (months):</label>
+                <select id="leasePeriod">
+                    <option value="12">12</option>
+                    <option value="24">24</option>
+                    <option value="34">36</option>
+                    <option value="48">48</option>
+                    <option value="60">60</option>
+                </select>
+                <!-- <input type="range" id="leasePeriodRange" min="12" max="60" step="12" value="12"> -->
+            </div>
+
+            <div class="calcGroup">
+                <label for="carValue">Car Value (€10,000 - €200,000):</label>
+                <input type="number" id="carValue" min="10000" max="200000" step="5000" value="10000">
+                <input type="range" id="carValueRange" min="10000" max="200000" step="5000" value="10000">
+            </div>            
+
+            <div class="calcGroup">
+                <label for="downPayment">Down Payment (10% - 50%):</label>
+                <input type="number" id="downPayment" min="10" max="50" step="5" value="10">
+                <input type="range" id="downPaymentRange" min="10" max="50" step="5" value="10">
+            </div>
+        </div>
+
+        <div class="leasingDetails">
+            <h2>Leasing Details</h2>
+            <div class="detailsContainer">
+                <div class="detailsColumn leftColumn">
+                    <p id="totalLeasingDisplay">Total Leasing Cost: </p>
+                    <p id="downPaymentDisplay">Down Payment: </p>
+                </div>
+
+                <div class="verticalLine"></div>
+
+                <div class="detailsColumn rightColumn">
+                    <p id="monthlyInstallmentDisplay">Monthly Installment: </p>
+                    <p id="interestRateDisplay">Interest Rate: </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="src.js"></script>
+</body>
+
+</html>

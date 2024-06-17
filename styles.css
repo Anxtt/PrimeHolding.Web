@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#carValue, #downPayment {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+
+h1 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.calcContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.calcGroup {
+    width: 48%;
+    margin-bottom: 25px;
+}
+
+.calcGroup label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.calcGroup input,
+.calcGroup select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.calcGroup input[type="range"] {
+    margin-top: 10px;
+}
+
+.leasingDetails {
+    border-top: 1px solid black;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.leasingDetails p {
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.leasingDetails h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.detailsContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    position: relative;
+}
+
+.detailsColumn {
+    width: 48%;
+}
+
+.leftColumn p {
+    text-align: left;
+}
+
+.rightColumn p {
+    text-align: center;
+}
+
+.detailsColumn p {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.verticalLine {
+    width: 1px;
+    background-color: #000;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 600px) {
+    .calculator {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .calcContainer {
+        display: block;
+    }
+
+    .calcGroup {
+        width: 100%;
+    }
+
+    .detailsContainer {
+        display: block;
+    }
+
+    .detailsColumn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .calcGroup input,
+    .calcGroup select {
+        padding: 10px;
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .leasingDetails {
+        padding-top: 10px;
+    }
+
+    .leasingDetails h2 {
+        font-size: 1.2em;
+    }
+
+    .leasingDetails p {
+        flex-direction: column;
+        padding-left: 10px;
+    }
+
+    .detailsColumn p {
+        flex-direction: column; 
+    }
+
+    .rightColumn p {
+        text-align: left;
+    }
+
+    .verticalLine {
+        display: none;
+    }
+}
